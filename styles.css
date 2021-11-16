@@ -16,14 +16,23 @@ body{
 
 }
 .main {
-    border: 3px bold black;
+    border: 5px solid black;
     width: 80%;
     height: 80%;
     background-color: blanchedalmond;
     margin: 30px auto;
-    background: url(./photos/dog.jpeg);
     background-size: cover;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.currentPhoto{
+    object-fit: cover;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .content h1 {
@@ -37,12 +46,10 @@ body{
 .content .material-icons-outlined {
     font-size: 100px;
 }
-.main .radioGroup{
+.radioGroup{
     position: absolute;
-    width: 100%;
     bottom: 0px;
     text-align: center;
-    padding: 20px;
 }
 input[type=radio] {
     height: 35px;

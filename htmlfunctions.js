@@ -3,11 +3,11 @@ export const listenerFunctions =
     function changePhoto(){
         const mainDiv = document.getElementById("main");
         let answer = document.getElementsByName("photo");
+        const img = document.querySelector(".currentPhoto");
 
         for(let i = 0; i < answer.length; i++){
             if(answer[i].checked){
-                mainDiv.style.background = `url('${answer[i].value}')`;
-                mainDiv.style.backgroundSize = "cover";
+                img.src = `${answer[i].value}`;
                 break;
             }
         }
